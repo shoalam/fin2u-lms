@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041c53"/>
+      <stop offset="100%" stop-color="#092569"/>
+    </linearGradient>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff598f"/>
+      <stop offset="100%" stop-color="#ff2e6d"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle accent border glow -->
+  <rect x="8" y="8" width="496" height="496" rx="120" fill="none" stroke="url(#pinkGrad)" stroke-width="8" stroke-opacity="0.4"/>
+
+  <!-- FIN Typography in Crisp White -->
+  <g filter="url(#shadow)">
+    <text x="75" y="325" 
+          font-family="system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, sans-serif" 
+          font-weight="900" 
+          font-size="160" 
+          letter-spacing="-4" 
+          fill="#ffffff">FIN</text>
+
+    <!-- 2U in Vibrant Rose/Pink Gradient -->
+    <text x="325" y="325" 
+          font-family="system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, sans-serif" 
+          font-weight="900" 
+          font-size="160" 
+          letter-spacing="-4" 
+          fill="url(#pinkGrad)">2U</text>
+  </g>
+
+  <!-- Top Accent Dot -->
+  <circle cx="440" cy="150" r="18" fill="url(#pinkGrad)"/>
+</svg>
