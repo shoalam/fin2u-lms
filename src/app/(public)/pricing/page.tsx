@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 /* ─── Data Structures ─── */
 type DevItem = {
@@ -82,20 +82,6 @@ const SERVICE_ITEMS: ServiceItem[] = [
 export default function PricingPage() {
   const [currency, setCurrency] = useState<'RM' | 'USD'>('RM');
 
-  useEffect(() => {
-    const root = document.documentElement;
-    const previousOverflowY = root.style.overflowY;
-    const previousBodyOverflowY = document.body.style.overflowY;
-
-    root.style.overflowY = 'hidden';
-    document.body.style.overflowY = 'hidden';
-
-    return () => {
-      root.style.overflowY = previousOverflowY;
-      document.body.style.overflowY = previousBodyOverflowY;
-    };
-  }, []);
-
   const totalDevCostRM = DEV_ITEMS.reduce((sum, i) => sum + i.priceRM, 0);
   const totalDevCostUSD = DEV_ITEMS.reduce((sum, i) => sum + i.priceUSD, 0);
 
@@ -114,7 +100,7 @@ export default function PricingPage() {
       fontFamily: "'Plus Jakarta Sans', 'Inter', system-ui, sans-serif",
       padding: '48px 24px 96px',
       position: 'relative',
-      overflowX: 'hidden',
+      overflow: 'hidden',
       maxWidth: '100vw',
     }}>
       {/* Background accents */}
